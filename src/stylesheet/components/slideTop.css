@@ -1,0 +1,12 @@
+.slideTop {
+    display:flex;
+    justify-content:center;
+    background-color:#6C63FF;
+    width:500px ;
+    border-radius:18px;
+    transition: all .4s ease;
+}
+
+.slideTop:hover {
+    width: 600px;
+}

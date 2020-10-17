@@ -1,0 +1,85 @@
+.headerBar {
+    height: 100px;
+    border-radius: 18px;
+    padding: 15px;
+
+    display: flex;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    color: black;
+
+    flex-wrap: wrap;
+    align-items: center;
+
+    justify-content: center;
+}
+
+.headerBarContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.search {
+    display: flex;
+    cursor: pointer;
+    background: #FFF;
+    border: none;
+    border-radius: 12px;
+    padding: 10px 15px 0px 15px;
+    height: 36px;
+    width: 68px;
+    margin-right: 30px;
+    transition: 0.4s ease-in-out;
+    margin-left:15px;
+    align-items: center;
+}
+
+.headerBarIconDiv {
+    display: flex;
+    cursor: pointer;
+    background: #FFF;
+    border: none;
+    border-radius: 12px;
+    padding: 5px 15px 0px 15px;
+    height: 36px;
+    width: 36px;
+    justify-content: center;
+    align-items: center;
+    margin-right: 30px;
+    transition: 0.4s ease-in-out;
+    align-items: center;
+}
+
+.headerBarIconDiv:hover {
+    width:60px
+}
+
+.createAccountDiv {
+    display: flex;
+    cursor: pointer;
+    background: #43dde6;
+    border: none;
+    border-radius: 12px;
+    padding: 5px 15px 0px 15px;
+    height: 36px;
+    color: #FFF;
+    width: 150px;
+    justify-content: center;
+    align-items: center;
+    margin-right: 30px;
+    transition: 0.4s ease-in-out;
+    align-items: center;
+}
+
+.createAccountDiv:hover {
+    width: 200px;
+}
+
+.inputHolder input {
+    border: none;
+    width:250px;
+    height: 36px;
+    outline: none;
+    font-size: 24px;
+    margin-left: 10px;
+}

@@ -1,0 +1,161 @@
+
+h1, h2, h3, button {
+    font-family: Gotham SSm A,Gotham SSm B,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Droid Sans,Helvetica Neue,Arial,sans-serif;
+}
+
+@keyframes startButton{
+    0% {font-size: 24px;}
+    50% {font-size: 12px;}
+    100% {font-size: 24px;}
+}
+
+
+.pageTitleWrapper {
+    display: flex;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    display:flex;
+    justify-content: center;
+}
+
+.contentBox {
+    background: #FFF;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: all 200ms ease-in-out;
+    text-decoration: none;
+    min-height: 180px;
+    min-width:800px;
+}
+
+.estanteBox {
+    background: #FFF;
+    border-radius: 20px;
+    box-shadow: 5px 2px 5px rgb(204, 204, 204);
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: all 200ms ease-in-out;
+    text-decoration: none;
+    min-height: 400px;
+    min-width: 350px;
+    max-width: 400px;
+    justify-content: center;
+    flex-direction: column;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.centered {
+    display: flex;
+    justify-content: center;
+}
+
+.darkerContent {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #6C63FF;
+    color: #FFF;
+    border-radius: 14px;
+    display: flex;
+}
+
+.startButton {
+    background-color: #56b3f9;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    width: 350px;
+    border-radius: 32px;
+    border: none;
+    font-size: 24px;
+    line-height: 15px;
+    font-weight: bold;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 0 20px;
+    cursor: pointer;
+}
+
+.startButton:hover {
+    animation-name: startButton;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+.flexColumn {
+    flex-direction: column;
+}
+
+.darkerContent .title {
+    display: flex;
+    justify-content: center;
+}
+
+.movieBlock {
+    background: #FFF;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: all 200ms ease-in-out;
+    text-decoration: none;
+    min-height: 180px;
+    min-width:800px;
+    color: black;
+}
+
+.movieBlock .movieTextData {
+    flex-direction: column;
+    margin-left: 30px;
+}
+
+.movieBlock .movieTextData h3 {
+    max-width: 550px;
+}
+
+.movieBlock .movieBanner {
+    height: 500px;
+    width: 300px;
+}
+
+#searchResult {
+    background-color: #e2dede;
+    width: 700px;
+    border-radius:24px;
+}
+
+#searchLoginButton {
+    background-color: #56b3f9;
+    height: 80px;
+    width: 250px;
+    border-radius: 32px;
+    border: none;
+    font-size: 24px;
+    line-height: 15px;
+    font-weight: bold;
+    color: #fff;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.bookSearchInputWrapper {
+    background-color: #FFF;
+    height: 50px;
+    width: 500px;
+    display: flex;
+    padding: 15px;
+    border-radius: 24px;
+}
+
+.bookSearchInputWrapper .bookSearchInput {
+    border: none;
+    font-size: 24px;
+    width: 500px;
+    font-size: 24px;
+    font-weight: 800;
+}

@@ -1,0 +1,21 @@
+/* :root {
+    --white-primary: #f0f0f0
+    --red-primary: #fc5185
+    --dark-blue-green-primary: #364f6b
+    --blue-primary: #43dde6
+} */
+
+body {
+    padding: 25px;
+    background: #F4F4F4;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+hr {
+    border: 3px solid;
+    border-radius: 16px;
+    width: 700px;
+}
