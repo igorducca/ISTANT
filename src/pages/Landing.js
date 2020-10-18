@@ -162,7 +162,7 @@ export default function Landing() {
                     <form>
                         <div className="bookSearchInputWrapper">
                             <FiSearch size={48} color={'rgb(65, 65, 65)'}/>
-                            <input className="bookSearchInput" placeholder="Em desenvolvimento..." name="m" type="text" id="moviesSearch"/>
+                            <input className="bookSearchInput" placeholder="Pesquise algum filme" name="m" type="text" id="moviesSearch"/>
                         </div>
                     </form>
                 </div>

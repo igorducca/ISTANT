@@ -37,7 +37,11 @@ export default function headerBar() {
                         <FiAtSign size={24} color={'rgb(65, 65, 65)'} onClick={slideToSocial}/>
                     </div>
     
-                    <div className="headerBarIconDiv" onClick={() => {NetlifyIdentity.logout()}} id="loginHeaderButton">
+                    <div className="headerBarIconDiv" onClick={() => {
+                        NetlifyIdentity.logout()
+                        window.location.href = window.location.href
+                    }
+                    } id="loginHeaderButton">
                         <h3>Sair</h3>
                     </div>
 
