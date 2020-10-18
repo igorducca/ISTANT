@@ -5,16 +5,6 @@
     --blue-primary: #43dde6
 } */
 
-@keyframes pageLoadAnim {
-    from {opacity: 0%;}
-    to {opacity: 100%}
-}
-
-#mainContent {
-    transition: .4s ease;
-    animation: pageLoadAnim ease-in-out forwards 1s;
-}
-
 body {
     padding: 25px;
     background: #F4F4F4;
