@@ -6,12 +6,12 @@ import '../stylesheet/pages/Landing.css'
 import HeaderBar from '../components/headerBar.js'
 import SlideTop from '../components/slideTop.js'
 
-import { initNetlifyIdentity, openNetlifyModal } from '../lib/netlifyFunctions'
-
 import $ from 'jquery'
 import Axios from 'axios'
 
 import { FiSearch } from 'react-icons/fi'
+
+import netlifyIdentity from 'netlify-identity-widget'
 
 export default function Landing() {
 
@@ -23,7 +23,27 @@ export default function Landing() {
 
     $(document).ready(function getReady() {
 
-        initNetlifyIdentity();
+        const user = netlifyIdentity.currentUser();
+        console.log(user)
+
+        var today = new Date()
+        var curHr = today.getHours()
+
+        if(user) {
+            if (curHr < 12) {
+                document.getElementById('usernameShow').innerText = `Bom dia, ${user.user_metadata.full_name}`
+            } else if (curHr < 18) {
+                document.getElementById('usernameShow').innerText = `Boa tarde, ${user.user_metadata.full_name}`
+            } else {
+                document.getElementById('usernameShow').innerText = `Boa noite, ${user.user_metadata.full_name}`
+            }
+
+            document.getElementById('loginSugestion1').hidden = true
+            document.getElementById('loginSugestion2').hidden = true
+        }
+        if(!user) {
+            document.getElementById('usernameShow').hidden = true
+        }
 
         if(!query.get('q')) {
             Axios.get('https://api.themoviedb.org/3/movie/popular?api_key=b57b43f9142c9cc5e6b9e91d5a4f9cdb&language=pt-BR&page=1')
@@ -68,7 +88,7 @@ export default function Landing() {
     })
 
     return (
-        <div>
+        <div id="mainContent">
 
             <header>
 
@@ -78,6 +98,10 @@ export default function Landing() {
 
             <hr />
 
+            <div style={{display:"flex", justifyContent:"center"}}>
+                <h1 id="usernameShow"></h1>
+            </div>
+
             <div style={{display:"flex", justifyContent:"center", marginTop:"15px"}}>
                 <div id="searchResult" style={{padding:"15px"}} hidden>
                     <h1>Procura feita com sucesso!</h1>
@@ -86,7 +110,7 @@ export default function Landing() {
                     <h2 id="otherDiscovery"></h2>
 
                     <div style={{display:"flex", justifyContent:"center"}}>
-                        <button className="startButton" onClick={openNetlifyModal}>Fazer login</button>
+                        <button className="startButton" onClick={netlifyIdentity.open('login')} id="loginSugestion">Fazer login</button>
                     </div>
                 </div>
             </div>
@@ -111,7 +135,7 @@ export default function Landing() {
                 <h2 style={{fontSize:"32px", maxWidth:'800px', textAlign:"left"}}>Gosta de ler né? Está no lugar certo! <br /> Se você também tem vontade de que todo mundo leia o que você gosta, pode começar agora!</h2>
 
                 <div style={{display:"flex", justifyContent:"center"}}>
-                    <button className="startButton">Mostrar meus livros</button>
+                    <button className="startButton" id="loginSugestion1">Mostrar meus livros</button>
                 </div>
             </div>
 
@@ -131,7 +155,16 @@ export default function Landing() {
 
                 <div style={{display:"flex", justifyContent:"center", alignItems:"center"}}>
                     <h1 style={{marginRight:"30px"}}>Gostou desses filmes né?</h1>
-                    <button className="startButton">Ver mais filmes</button>
+                    <button className="startButton" id="loginSugestion2">Ver mais filmes</button>
+                </div>
+
+                <div style={{display:"flex", justifyContent:"center", alignItems:"center"}}>
+                    <form>
+                        <div className="bookSearchInputWrapper">
+                            <FiSearch size={48} color={'rgb(65, 65, 65)'}/>
+                            <input className="bookSearchInput" placeholder="Em desenvolvimento..." name="m" type="text" id="moviesSearch"/>
+                        </div>
+                    </form>
                 </div>
             </div>
 
