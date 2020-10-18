@@ -7,6 +7,10 @@ netlifyIdentity.init({
   locale: 'pt'
 });
 netlifyIdentity.setLocale('pt');
+netlifyIdentity.on('logout', () => {
+  console.log('Deslogando usuário')
+  window.location.href = window.location.href
+})
 
 ReactDOM.render(
   <React.StrictMode>

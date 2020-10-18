@@ -39,7 +39,6 @@ export default function headerBar() {
     
                     <div className="headerBarIconDiv" onClick={() => {
                         NetlifyIdentity.logout()
-                        window.location.href = window.location.href
                     }
                     } id="loginHeaderButton">
                         <h3>Sair</h3>
