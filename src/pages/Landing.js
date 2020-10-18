@@ -122,7 +122,7 @@ export default function Landing() {
             <div className="flexColumn" style={{justifyContent:'center'}}>
 
                 <div className="title">
-                    <h2 style={{fontSize:'64px', fontWeight:800}}>Você é o cara da leitura?</h2>  
+                    <h2>Você é o cara da leitura?</h2>  
                 </div>
 
                 <form>

@@ -19,3 +19,16 @@ hr {
     border-radius: 16px;
     width: 700px;
 }
+
+@media only screen and (max-width: 600px) {
+    body {
+        padding: 15px;
+        background: #F4F4F4;
+    }
+
+    hr {
+        border: 3px solid;
+        border-radius: 16px;
+        width:350px;
+    }
+}

@@ -159,3 +159,169 @@ h1, h2, h3, button {
     font-size: 24px;
     font-weight: 800;
 }
+
+.title {
+    font-size: 32px;
+    font-weight: 800;
+}
+
+@media only screen and (max-width: 600px) {
+    .pageTitleWrapper {
+        display: flex;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 600;
+        display:flex;
+        justify-content: center;
+    }
+    
+    .contentBox {
+        background: #FFF;
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        margin-bottom: 20px;
+        transition: all 200ms ease-in-out;
+        text-decoration: none;
+        min-height: 90px;
+        min-width:400px;
+    }
+    
+    .estanteBox {
+        background: #FFF;
+        border-radius: 20px;
+        box-shadow: 5px 2px 5px rgb(204, 204, 204);
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        margin-bottom: 15px;
+        transition: all 200ms ease-in-out;
+        text-decoration: none;
+        min-height: 200px;
+        min-width: 165px;
+        max-width: 200px;
+        justify-content: center;
+        flex-direction: column;
+        font-family: 'Open Sans', sans-serif;
+    }
+    
+    .centered {
+        display: flex;
+        justify-content: center;
+    }
+    
+    .darkerContent {
+        margin-top: 30px;
+        padding: 20px;
+        background-color: #6C63FF;
+        color: #FFF;
+        border-radius: 14px;
+        display: flex;
+    }
+    
+    .startButton {
+        background-color: #56b3f9;
+        justify-content: center;
+        align-items: center;
+        height: 70px;
+        width: 175px;
+        border-radius: 32px;
+        border: none;
+        font-size: 12px;
+        line-height: 15px;
+        font-weight: bold;
+        color: #fff;
+        text-transform: uppercase;
+        padding: 0 20px;
+        cursor: pointer;
+    }
+    
+    .startButton:hover {
+        animation-name: startButton;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+    }
+    
+    .flexColumn {
+        flex-direction: column;
+    }
+    
+    .darkerContent .title {
+        display: flex;
+        justify-content: center;
+    }
+    
+    .movieBlock {
+        background: #FFF;
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        padding: 20px;
+        margin-bottom: 20px;
+        transition: all 200ms ease-in-out;
+        text-decoration: none;
+        min-height: 90px;
+        min-width:400px;
+        color: black;
+    }
+    
+    .movieBlock .movieTextData {
+        flex-direction: column;
+        margin-left: 15px;
+    }
+    
+    .movieBlock .movieTextData h3 {
+        max-width: 250px;
+    }
+    
+    .movieBlock .movieBanner {
+        height: 250px;
+        width: 150px;
+    }
+    
+    #searchResult {
+        background-color: #e2dede;
+        width: 350px;
+        border-radius:24px;
+    }
+    
+    #searchLoginButton {
+        background-color: #56b3f9;
+        height: 80px;
+        width: 125px;
+        border-radius: 32px;
+        border: none;
+        font-size: 24px;
+        line-height: 15px;
+        font-weight: bold;
+        color: #fff;
+        text-transform: uppercase;
+        cursor: pointer;
+    }
+    
+    .bookSearchInputWrapper {
+        background-color: #FFF;
+        height: 50px;
+        width: 250px;
+        display: flex;
+        padding: 15px;
+        border-radius: 24px;
+    }
+    
+    .bookSearchInputWrapper .bookSearchInput {
+        border: none;
+        font-size: 24px;
+        width: 250px;
+        font-size: 18px;
+        font-weight: 800;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .title {
+        font-size: 18px;
+        font-weight: 800;
+    }
+}
