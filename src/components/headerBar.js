@@ -44,7 +44,7 @@ export default function headerBar() {
                         <h3>Sair</h3>
                     </div>
 
-                    <Link to="/perfil/igor_ducca" style={{textDecoration:"none"}}>
+                    <Link to={`/perfil/${user.user_metadata.full_name}`} style={{textDecoration:"none"}}>
                         <div className="createAccountDiv" onClick={() => {NetlifyIdentity.open('signup')}} id="signupHeaderButton">
                             <h3>Meu perfil</h3>
                         </div>

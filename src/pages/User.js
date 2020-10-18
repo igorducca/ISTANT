@@ -1,32 +1,14 @@
-import React, { useState } from 'react'
-import { useParams } from 'react-router-dom'
-import netlifyIdentity from 'netlify-identity-widget'
-import { param } from 'jquery';
+import React, { useState, useEffect } from 'react'
 
-export default class User extends React.Component {
-    render() {
-        console.log(this.props)
+export default function User(props) {
 
-        var paramUser = this.props.match.params.user
-        var loggedUser = netlifyIdentity.currentUser()
+    var selectedUser = props.match.params.user
 
-        if(paramUser == loggedUser.user_metadata.full_name) {
-            alert("Bem vindo ao seu perfil")
+    console.log(selectedUser)
 
-            return (
-                <div>
-                    <h1 id="pageTitle">Agora você está vendo seu perfil, {loggedUser.user_metadata.full_name}</h1>
-                </div>
-            )
-        }
-        else {
-            alert("Você está no perfil de outra pessoa")
-
-            return (
-                <div>
-                    <h1 id="pageTitle">{loggedUser.user_metadata.full_name}, você está vendo o perfil de {paramUser}</h1>
-                </div>
-            )
-        }
-    }
+    return (
+        <div>
+            <h1>blablabla</h1>
+        </div>
+    )
 }
